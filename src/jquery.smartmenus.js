@@ -607,6 +607,7 @@
 				}
 			},
 			menuHideAll: function() {
+				if (this.isCollapsible()) { return } // !ian: if small screen: disable menuHideAll() to not collapse all sub-menu when user click menu toggler
 				if (this.showTimeout) {
 					clearTimeout(this.showTimeout);
 					this.showTimeout = 0;
