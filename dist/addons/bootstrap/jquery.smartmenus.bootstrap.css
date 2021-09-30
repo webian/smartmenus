@@ -39,7 +39,7 @@
 	content: '-';
 }
 .navbar-nav.sm-collapsible a.has-submenu {
-	padding-right: 50px;
+	/* padding-right: 50px; // !ian: not needed */
 }
 /* revert to Bootstrap's default carets in collapsible mode when the "data-sm-skip-collapsible-behavior" attribute is set to the ul.navbar-nav */
 .navbar-nav.sm-collapsible[data-sm-skip-collapsible-behavior] .caret, .navbar-nav.sm-collapsible[data-sm-skip-collapsible-behavior] ul .caret {
