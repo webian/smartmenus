@@ -619,6 +619,7 @@
 				}
 			},
 			menuHideAll: function() {
+				if (this.isCollapsible()) { return } // !ian: if small screen: disable menuHideAll() to not collapse all sub-menu when user click menu toggler
 				if (this.showTimeout) {
 					clearTimeout(this.showTimeout);
 					this.showTimeout = 0;
@@ -1120,7 +1121,7 @@
 				if (!('onorientationchange' in window) || e.type == 'orientationchange') {
 					var collapsible = this.isCollapsible();
 					// if it was collapsible before resize and still is, don't do it
-					if (!(this.wasCollapsible && collapsible)) { 
+					if (!(this.wasCollapsible && collapsible)) {
 						if (this.activatedItems.length) {
 							this.activatedItems[this.activatedItems.length - 1][0].blur();
 						}
